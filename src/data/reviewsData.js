@@ -1,26 +1,22 @@
-const reviews = [
+export default [
   {
-    name: 'Mehmet Yalçın',
-    stars: 5,
-    comment:
-      'Uygulama hızlı çalışıyor ve reklam yok. Ücretsiz olması da ayrıca güzel. Cari eklemek ve masraf girişi yapmak çok kolay. Tavsiye ederim.',
+    name: "Burhan CENGİZ",
+    comment: "Gerçekten çok güzel bir uygulama olmuş. Teşekkürler.",
+    stars: 5
   },
   {
-    name: 'Merve',
-    stars: 5,
-    comment:
-      'Uygulama hızlı, saniyeler içinde cari kaydı oluşturuyorum. Ücretsiz olması çok iyi.',
+    name: "Merve",
+    comment: "Uygulama hızlı, saniyeler içinde cari kaydı oluşturuyorum. Ücretsiz olması çok iyi.",
+    stars: 5
   },
   {
-    name: 'Mehmet Beşir KAYA',
-    stars: 5,
-    comment: 'Uygulama ücretsiz ve hızlı olduğu için teşekkürler.',
+    name: "Mehmet Beşir KAYA",
+    comment: "Uygulama ücretsiz ve hızlı olduğu için teşekkürler.",
+    stars: 5
   },
   {
-    name: 'Burhan CENGİZ',
-    stars: 5,
-    comment: 'Gerçekten çok güzel bir uygulama olmuş. Teşekkürler.',
-  },
+    name: "Beytullah GÖKSU",
+    comment: "Arayüz sade, raporlar güçlü. Kesinlikle tavsiye ederim.",
+    stars: 5
+  }
 ];
-
-export default reviews;

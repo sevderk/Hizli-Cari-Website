@@ -1,41 +1,100 @@
 .screenshots-section {
-  padding: 4rem 2rem;
+  padding: 3rem 4.5rem;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .section-title {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-weight: 700;
 }
 
 .screenshots-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   justify-items: center;
 }
 
 .screenshot-card {
-  background-color: white;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+  transition: transform .25s ease;
+  width: 100%;
+  max-width: 320px;
 }
 
 .screenshot-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .screenshot-img {
   width: 100%;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
 }
 
 .mt-section-gap {
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1399px) {
+  .screenshots-section {
+    padding: 3.5rem 1.5rem;
+  }
+  .screenshots-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .screenshots-grid {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .screenshots-section {
+    padding: 3.5rem 1.5rem;
+  }
+  .screenshots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .screenshot-card {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .screenshots-section {
+    padding: 3.5rem 1.5rem;
+  }
+  .screenshots-grid {
+    gap: 1rem;
+  }
+  .screenshot-card {
+    padding: 1rem;
+    max-width: none;
+  }
+  .section-title {
+    margin-bottom: 2rem;
+  }
+  .mt-section-gap {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .screenshot-card {
+    padding: 0.9rem;
+  }
 }

@@ -1,55 +1,72 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import '../styles/reviews.css';
 import colors from '../styles/colors';
 import reviews from '../data/reviewsData';
 
 const ReviewsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const getVisibleCount = () =>
+    typeof window !== 'undefined' && window.innerWidth <= 768 ? 1 : 2;
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? reviews.length - 1 : prev - 1
-    );
-  };
+  const [startIndex, setStartIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(getVisibleCount());
 
-  const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev === reviews.length - 1 ? 0 : prev + 1
-    );
-  };
+  useEffect(() => {
+    const onResize = () => setVisibleCount(getVisibleCount());
+    window.addEventListener('resize', onResize);
+    setVisibleCount(getVisibleCount());
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
-  const review = reviews[currentIndex];
+  const len = reviews.length;
+
+  const visibleItems = useMemo(() => {
+    if (!len) return [];
+    const out = [];
+    for (let i = 0; i < visibleCount; i += 1) {
+      out.push(reviews[(startIndex + i) % len]);
+    }
+    return out;
+  }, [startIndex, visibleCount, len]);
+
+  const prev = () => setStartIndex((p) => (p - visibleCount + len) % len);
+  const next = () => setStartIndex((p) => (p + visibleCount) % len);
 
   return (
     <section
-      className="reviews-section"
-      style={{ backgroundColor: colors.white }}
+      className="rvs-section"
+      id="reviews"
+      style={{
+        backgroundColor: colors.white,
+        '--primary': colors.primary,
+        '--white': colors.white
+      }}
     >
-      <h2
-        className="reviews-title"
-        style={{ color: colors.primary }}
-      >
-        Kullanıcı Yorumları
-      </h2>
-      <div className="single-review-container">
-        <button
-          className="nav-btn"
-          onClick={handlePrev}
-          style={{ backgroundColor: colors.primary }}
-        >
-          ❮
+      <div className="rvs-title-wrap">
+        <h2 className="rvs-title" style={{ color: colors.darkblue }}>
+          Hızlı Cari için Ne Diyorlar?
+        </h2>
+        <div className="rvs-underline" />
+      </div>
+
+      <div className="rvs-container">
+        <button type="button" aria-label="Önceki yorumlar" className="rvs-nav rvs-nav--prev" onClick={prev}>
+          <span className="rvs-arrow rvs-arrow--left" />
         </button>
-        <div className="review-card single">
-          <div className="stars">{'★'.repeat(review.stars)}</div>
-          <h3 style={{ color: colors.darkblue }}>{review.name}</h3>
-          <p style={{ color: colors.graytext }}>{review.comment}</p>
+
+        <div className={`rvs-grid ${visibleCount === 1 ? 'rvs-grid--single' : ''}`}>
+          {visibleItems.map((r, i) => (
+            <article className="rvs-card" key={`${r.name}-${i}`}>
+              <p className="rvs-quote">“{r.comment}”</p>
+              <div className="rvs-meta">
+                <span className="rvs-name">{r.name}</span>
+                <span className="rvs-stars">{'★'.repeat(r.stars || 5)}</span>
+              </div>
+            </article>
+          ))}
         </div>
-        <button
-          className="nav-btn"
-          onClick={handleNext}
-          style={{ backgroundColor: colors.primary }}
-        >
-          ❯
+
+        <button type="button" aria-label="Sonraki yorumlar" className="rvs-nav rvs-nav--next" onClick={next}>
+          <span className="rvs-arrow rvs-arrow--right" />
         </button>
       </div>
     </section>

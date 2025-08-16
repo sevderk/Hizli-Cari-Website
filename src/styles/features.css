@@ -1,8 +1,6 @@
 .features-section {
-  padding: 3rem 1rem;
-  background-color: white;
+  padding: 3rem 1.5rem;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
 }
 
 .features-title {
@@ -54,9 +52,8 @@
 
 @media (max-width: 600px) {
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-
   .feature-icon {
     width: 56px;
     height: 56px;

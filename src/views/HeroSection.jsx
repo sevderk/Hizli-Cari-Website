@@ -1,35 +1,89 @@
 import React from 'react';
 import '../styles/hero.css';
-import logo from '../assets/logo.png';
+
+import proderLogo from '../assets/proderlogo.gif';
+import Logo from '../assets/logo.png';
 import heroBg from '../assets/hero-bg.png';
 import playStoreBadge from '../assets/icons/google-play-badge.svg';
-import arrowDown from '../assets/icons/down-arrow.svg';
+import appStoreBadge from '../assets/icons/app-store-badge.svg';
+import phoneImage from '../assets/phone.png';
+import headerData from '../data/headerData';
+import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
+  const { contact, nav } = headerData;
+
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <img src={heroBg} alt="Background" className="hero-bg" />
       <div className="hero-overlay" />
-
-      <a href="#footer" className="contact-link">İletişim</a>
-
-      <div className="hero-content">
-        <div className="hero-left">
-          <img src={logo} alt="Hızlı Cari Logo" className="hero-logo" />
-          <h1>Hızlı ve Pratik Cari Takip</h1>
-          <p>Hızlı Cari ile saniyeler içinde cari hesap oluşturun, borç-alacak işlemlerini girin, masraflarınızı yönetin ve detaylı raporlarla finansal durumunuzu anlık takip edin. </p>
-          <p>Üstelik ücretsiz, hızlı ve kullanımı çok kolay.</p>
-          <div className="download-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.proder.hizlicari">
-              <img src={playStoreBadge} alt="Google Play" className="store-badge" />
+      <div className="hero-header">
+        <div className="header-container">  
+          <div className="logo-and-contact">
+            <a href="#hero" aria-label="Ana sayfa">
+              <img src={proderLogo} alt="Proder Logo" className="header-logo" />
             </a>
+            <div className="contact-info">
+              <a href={contact.phoneHref} style={{ color: '#333', textDecoration: 'none', fontWeight: 'bold' }}>
+                {contact.phoneText}
+              </a>{' '}
+              |{' '}
+              <a href={contact.emailHref} style={{ color: '#333', textDecoration: 'none', fontWeight: 'bold' }}>
+                {contact.emailText}
+              </a>
+            </div>
+          </div>
+
+          <div className="nav-links">
+            {nav.map((item) => (
+              <a key={item.href} href={item.href}>
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
+      <div className="hero-content">
+        <div className="hero-left">
+          <img src={Logo} alt="Hızlı Cari Logo" className="hero-logo" />
+          <h1>Cari Masraf Takip</h1>
+
+          <p>
+            Hızlı Cari ile saniyeler içinde cari hesap oluşturun, borç-alacak işlemlerinizi girin, masraflarınızı yönetin ve detaylı raporlarla finansal durumunuzu anlık takip edin.
+          </p>
+
+          <p className="hero-highlight">
+            Üstelik<span className="highlighted">tamamen ücretsiz, hızlı</span>ve kullanımı<span className="highlighted">çok kolay.</span>
+          </p>
+
+          <div className="download-buttons">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.proder.hizlicari"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={playStoreBadge} alt="Google Play" className="store-badge" />
+            </a>
+
+            <a
+              href="https://apps.apple.com/us/app/hızlı-cari-cari-masraf-takip/id6746715804?platform=iphone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={appStoreBadge} alt="App Store" className="store-badge" />
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-phone">
+          <img src={phoneImage} alt="App Screenshot" className="phone-image" />
+        </div>
+      </div>
+
       <div className="scroll-arrow">
-        <a href="#features">
-          <img src={arrowDown} alt="Aşağı Kaydır" />
+        <a href="#features" aria-label="Özelliklere geç">
+          <ChevronDown size={36} strokeWidth={1} color="#fff" />
         </a>
       </div>
     </section>
