@@ -1,12 +1,74 @@
-# React + Vite
+<img width="1900" height="642" alt="Screenshot 2025-08-16 185921" src="https://github.com/user-attachments/assets/223aee19-5b53-40c7-83aa-aaec3ae9fbe0" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌐 Hızlı Cari — Promotional Website
 
-Currently, two official plugins are available:
+The **Hızlı Cari Promotional Website** is a modern, responsive landing page built with **React + Vite**.  
+It is designed to showcase core features, app screenshots, user reviews, and contact information in a professional, lightweight web experience.  
+This project focuses entirely on the **web presentation layer**, with careful attention to performance, accessibility, and responsive behavior.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Demo:** [hizli-cari-website.vercel.app](https://hizli-cari-website.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Highlights
+
+- 🚀 **Fast & Lightweight** — React 18 + Vite for quick iteration and optimized builds  
+- 🎨 **Modern Design** — Clean, responsive layout that scales elegantly on mobile and desktop  
+- 🧩 **Component-Driven** — Clear separation of concerns across sections and styles  
+- 🌍 **Brand Alignment** — Custom colors, assets, and typography that reflect Hızlı Cari’s identity  
+- 🔄 **Continuous Deployment** — Auto-deployed via Vercel on every push  
+
+---
+
+## 📷 Key Sections
+
+- **Hero Section** — First impression with logo, tagline, and app visuals  
+- **Features Section** — Highlights core capabilities (current accounts, expenses, reports, multi-currency, etc.)   
+- **Screenshots Section** — Curated app screens with short, meaningful descriptions
+- **Help Section** — *Interactive cards that flip on click* to reveal concise how-to guidance (keyboard accessible) 
+- **Reviews Section** — Horizontal, card-based testimonials emphasizing credibility  
+- **Download Section** — Clear call-to-action with store badges and a hero-consistent background  
+- **Footer** — Contact details, developer information, and useful links  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 18**  
+- **Vite** (dev server & bundler)  
+- **CSS (custom styles)** for layout/visuals  
+- **Lucide React** for icons  
+- **Vercel** for hosting & CI/CD  
+
+---
+
+## 🌟 Credits
+
+Developed by [@sevderk](https://github.com/sevderk)  
+Brand assets and mobile application by **PRODER YAZILIM İLETİŞİM SİSTEMLERİ TİC. A.Ş.**
+
+---
+
+## 🚀 Getting Started
+
+**Clone the repository:**
+```bash
+git clone https://github.com/sevderk/Hizli-Cari-Website.git
+cd Hizli-Cari-Website
+```
+**Install dependencies:**
+```bash
+npm install
+```
+**Run the development server:**
+```bash
+npm run dev
+```
+**Build for production:**
+```bash
+npm run build
+```
+**Preview the production build locally:**
+```bash
+npm run preview
+```
