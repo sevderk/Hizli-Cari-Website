@@ -12,7 +12,7 @@ This project focuses entirely on the **web presentation layer**, with careful at
 
 ## ✨ Highlights
 
-- 🚀 **Fast & Lightweight** — React 18 + Vite for quick iteration and optimized builds  
+- 🚀 **Fast & Lightweight** — React 19 + Vite for quick iteration and optimized builds  
 - 🎨 **Modern Design** — Clean, responsive layout that scales elegantly on mobile and desktop  
 - 🧩 **Component-Driven** — Clear separation of concerns across sections and styles  
 - 🌍 **Brand Alignment** — Custom colors, assets, and typography that reflect Hızlı Cari’s identity  
@@ -34,9 +34,10 @@ This project focuses entirely on the **web presentation layer**, with careful at
 
 ## 🛠️ Tech Stack
 
-- **React 18**  
+- **React 19**  
 - **Vite** (dev server & bundler)  
-- **CSS (custom styles)** for layout/visuals  
+- **CSS Modules** — Modular, maintainable styles for layout/visuals
+- **JavaScript (ES6+)** — Logic and interactivity    
 - **Lucide React** for icons  
 - **Vercel** for hosting & CI/CD  
 
