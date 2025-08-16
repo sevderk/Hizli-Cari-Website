@@ -37,7 +37,7 @@ This project focuses entirely on the **web presentation layer**, with careful at
 - **React 19**  
 - **Vite** (dev server & bundler)  
 - **CSS Modules** — Modular, maintainable styles for layout/visuals
-- **JavaScript (ES6+)** — Logic and interactivity    
+- **JavaScript** — Logic and interactivity    
 - **Lucide React** for icons  
 - **Vercel** for hosting & CI/CD  
 
