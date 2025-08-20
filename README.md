@@ -1,4 +1,4 @@
-<img width="1900" height="642" alt="Screenshot 2025-08-16 185921" src="https://github.com/user-attachments/assets/223aee19-5b53-40c7-83aa-aaec3ae9fbe0" />
+<img width="1896" height="623" alt="image" src="https://github.com/user-attachments/assets/7dcefad1-4590-4192-af93-8f8e935bfec3" />
 
 # 🌐 Hızlı Cari — Promotional Website
 
