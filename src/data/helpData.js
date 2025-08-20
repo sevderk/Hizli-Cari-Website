@@ -30,7 +30,7 @@ export default [
     icon: TurkishLira,
     question: 'Para birimi nasıl değiştirilir?',
     answer:
-      "Ana ekran > Ayarlar > Para Birimi'ne girin. Listeden kullanmak istediğiniz para birimini (örneğin Türk Lirası) seçerek onaylayın."
+      "Ana ekran > Ayarlar > Para Birimi'ne girin. Kullanmak istediğiniz para birimini (örneğin Türk Lirası) seçip onaylayın."
   },
   {
     icon: BarChart3,
