@@ -8,7 +8,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -63,6 +62,7 @@ html, body {
   align-items: center;
   gap: .75rem;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .header-logo { height: 40px; }
@@ -102,7 +102,8 @@ html, body {
 
 .hero-left { flex: 1; min-width: 280px; }
 .hero-logo {
-  height: 50px; margin-top: 4rem;
+  height: 50px;
+  margin-top: 4rem; /* Masaüstü için */
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,.5));
 }
 .hero h1 { font-size: 2.7rem; margin: 1rem 0; margin-top: 3rem; }
@@ -171,58 +172,65 @@ html, body {
     align-items: center;
     gap: var(--hdr-row-gap);
   }
+
   .logo-and-contact{
     justify-content: center;
+    align-items: center;
     gap: .5rem;
-  }
-  .header-logo{ height: 34px; }
-  .contact-info{ font-size: .92rem; color:#444; }
-  .nav-links{
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: clamp(.5rem, 2.2vw, .9rem);
-    padding-bottom: 2px;
+    flex-wrap: nowrap;
+    max-width: 100%;
   }
 
-  .hero-content{
-    flex-direction: column; align-items: center; text-align: center;
-    padding: 4.5rem 1rem 2.5rem;
+  .header-logo{ height: 30px; }
+
+  .contact-info{
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #444;
+    white-space: nowrap;      
+    max-width: calc(100vw - 140px);
+    overflow: visible;
+    text-overflow: clip;
   }
-  .hero-logo{ margin-top: 4rem; margin-bottom: -1rem; }
-  .hero h1{ font-size: 2.35rem; }
+
+  .nav-links{ display: none; }
+
+  .hero-logo{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1{
+    font-size: 2.35rem;
+    margin-top: 0;
+  }
+
   .hero p { font-size: 1.05rem; }
   .phone-image{ max-width: 460px; margin-top: 1rem; }
-
   .download-buttons{ justify-content: center; }
 }
 
-@media (max-width: 480px){
-  .header-logo{ height: 30px; }
-  .contact-info{ font-size: .8rem; }
-  .nav-links{
-    gap: clamp(.45rem, 2.8vw, .7rem);
-    font-size: .95rem;
+@media (min-width: 391px) and (max-width: 900px){
+  .hero-logo{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
+}
 
+@media (max-width: 480px){
   .hero h1{ font-size: 2.05rem; }
   .phone-image{ max-width: 400px; margin-top: 0; }
   .store-badge{ height: 55px; }
-
-  .hero-content{
-    padding: 4rem 1rem 2rem;
-  }
+  .hero-content{ padding: 4rem 1rem 2rem; }
 }
 
 @media (max-width: 400px){
-  .hero-content{
-    padding-top: 5rem;
-  }
-
-  .hero-left{
-    padding-top: 1rem;
-  }
+  .hero-content{ padding-top: 5rem; }
+  .hero-left{ padding-top: 1rem; }
 }
-
 
 @media (min-width: 1201px) {
   .download-buttons {
@@ -232,10 +240,7 @@ html, body {
   }
 }
 
-:root{
-  --header-h: 25px;
-}
-
+:root{ --header-h: 25px; }
 html, body{
   scroll-padding-top: var(--header-h);
   scroll-behavior: smooth;
@@ -311,9 +316,18 @@ html, body{
   }
 
   .hero-logo { margin-top: 0; }
-  .phone-image {
-    margin-top: 0;
-    max-width: clamp(480px, 34vw, 640px);
-  }
+  .phone-image { margin-top: 0; max-width: clamp(480px, 34vw, 640px); }
 }
 
+@media (max-width: 374px){
+  .logo-and-contact{
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+  }
+  .contact-info{
+    white-space: normal;
+    max-width: 100%;
+    text-align: center;
+  }
+}

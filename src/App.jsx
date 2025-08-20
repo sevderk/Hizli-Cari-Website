@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/tailwind.css';
 import HeroSection from './views/HeroSection';
 import FeaturesSection from './views/FeaturesSection';
 import ScreenshotsSection from './views/ScreenshotsSection';
@@ -18,7 +17,7 @@ function App() {
   });
 
   return (
-    <div className="font-sans bg-white text-blackish">
+    <div className='app-root'>
       <HeroSection />
       <FeaturesSection />
       <ScreenshotsSection />

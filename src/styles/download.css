@@ -3,7 +3,6 @@
   padding: 4rem 1.5rem 0;
   position: relative;
   overflow: hidden;
-  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   min-height: clamp(320px, 46vw, 320px);
   --phone-shift-x: 32px;
 }
