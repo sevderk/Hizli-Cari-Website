@@ -1,6 +1,10 @@
 :root {
   --color-blackish: #333333;
   --color-white: #ffffff;
+
+  --hdr-gap: clamp(0.75rem, 1.6vw, 1.5rem);
+  --hdr-pad: clamp(0.5rem, 1.2vw, 0.75rem);
+  --hdr-row-gap: clamp(0.35rem, 1vw, 0.6rem);
 }
 
 html, body {
@@ -9,7 +13,17 @@ html, body {
   padding: 0;
   background: var(--color-white);
   color: var(--color-blackish);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 :focus-visible { outline: 3px solid #e20a17; outline-offset: 2px; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5rem; }
+p { margin: 0 0 .75rem; }
+
+section[id], footer[id] { scroll-margin-top: 60px; }

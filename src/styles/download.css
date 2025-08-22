@@ -134,7 +134,12 @@
     grid-template-columns: 1fr;
     text-align: center;
     padding-right: 0;
-    padding-left: 16px;
+    padding-left: 0;
+    margin-inline: auto;
+  }
+  .dl-left {
+    max-width: none;
+    margin-inline: auto;
   }
   .dl-badges {
     justify-content: center;
@@ -155,9 +160,7 @@
     max-width: 360px;
     height: auto;
     display: block;
-  }
-  .dl-left {
-    max-width: none;
+    margin-inline: auto;
   }
 }
 
