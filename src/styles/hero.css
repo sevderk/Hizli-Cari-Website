@@ -51,10 +51,16 @@ html, body {
   margin-top: 4rem;
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,.5));
 }
-.hero h1 { font-size: 2.7rem; margin: 1rem 0; margin-top: 3rem; }
-.hero p  { font-size: 1.2rem; margin-bottom: .5rem; }
 
-.hero-highlight { font-size: 1.25rem; font-weight: 400; color:#fff; margin-top: 1.5rem; }
+.hero h1 { font-size: 2.7rem; margin: 1rem 0 0; }
+
+.hero p { font-size: 1.2rem; margin: 0; }
+.hero h1 + p,
+.hero p + p {
+  margin-top: 1.25rem;
+}
+
+.hero-highlight { font-size: 1.25rem; font-weight: 400; color:#fff; }
 .highlighted{
   font-weight: 700; font-family: 'Rubik', sans-serif;
   padding: .1rem .3rem; border-radius: 6px; transition: all .3s ease; display: inline-block;
@@ -144,6 +150,9 @@ html, body {
   .phone-image{ max-width: 400px; margin-top: 0; }
   .store-badge{ height: 55px; }
   .hero-content{ padding: 4rem 1rem 2rem; }
+
+  .hero h1 + p,
+  .hero p + p { margin-top: 1rem; }
 }
 
 @media (max-width: 400px){
@@ -225,7 +234,6 @@ html, body {
   .phone-image { margin-top: 0; max-width: clamp(480px, 34vw, 640px); }
 }
 
-/* ✅ Senin eklediğin kısımlar tutuldu */
 @media (max-width: 374px){
   .logo-and-contact{
     flex-direction: column;
@@ -248,5 +256,18 @@ html, body {
   .hero p { 
     font-size: 1.2rem;  
     margin-top: 0.1;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-logo {
+    transform: translateX(-4px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    transform: translateX(-6px);
   }
 }
