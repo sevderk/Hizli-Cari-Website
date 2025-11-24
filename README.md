@@ -6,7 +6,7 @@ The **Hızlı Cari Promotional Website** is a modern, responsive landing page bu
 It is designed to showcase core features, app screenshots, user reviews, and contact information in a professional, lightweight web experience.  
 This project focuses entirely on the **web presentation layer**, with careful attention to performance, accessibility, and responsive behavior.
 
-🔗 **Live Demo:** [hizli-cari-website.vercel.app](https://hizli-cari-website.vercel.app)
+🔗 **Live Demo:** [https://hizli-cari-website.netlify.app](https://hizli-cari-website.netlify.app)
 
 ---
 
